@@ -1,504 +1,445 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>dotnetskills - Mykhailo Nohas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="dotnetskills - Mykhailo Nohas" />
-    <meta name="keywords" content="dotnetskills, Nohas, Mykhailo, dotnet, .Net, Mykhailo Nohas, .Net developer" />
-    <meta name="author" content="Mykhailo Nohas" />
-    <link rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mykhailo Nohas - Hands-on Engineering Manager</title>
+    <meta name="description" content="Mykhailo Nohas - hands-on Engineering Manager with 12 years in software development. People management, platform reliability, internal tools and AI automation. Remote, B2B (EU / US).">
+    <meta name="author" content="Mykhailo Nohas">
+    <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="https://mn.dotnetskills.net/">
+    <!-- ?v= busts browsers' favicon cache after an icon change -->
+    <link rel="icon" href="favicon.ico?v=2" sizes="32x32">
+    <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/animate.css" type="text/css">
-    <link rel="stylesheet" href="css/transition-animations.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Mykhailo Nohas - Hands-on Engineering Manager">
+    <meta property="og:description" content="12 years in software development. Leading teams across people management, technical decisions and product delivery - while staying close to the code.">
+    <meta property="og:url" content="https://mn.dotnetskills.net/">
+    <meta property="og:image" content="https://mn.dotnetskills.net/images/main_photo.jpg">
 
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
 
+    <script>
+        document.documentElement.classList.add('js');
+        // Apply saved theme before first paint to avoid a flash.
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+            } catch (e) { /* storage unavailable: fall back to system preference */ }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mykhailo Nohas",
+        "jobTitle": "Engineering Manager",
+        "url": "https://mn.dotnetskills.net/",
+        "image": "https://mn.dotnetskills.net/images/main_photo.jpg",
+        "email": "mailto:myhazbo@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Rzeszów", "addressCountry": "PL" },
+        "sameAs": ["https://www.linkedin.com/in/mykhailo-nohas-5b6169a0"],
+        "knowsLanguage": ["uk", "pl", "en"]
+    }
+    </script>
 </head>
 
-<body class="material-template">
-    <!-- Loading animation -->
-    <div class="preloader">
-        <div class="preloader-animation">
-            <div class="preloader-spinner">
-            </div>
-        </div>
-    </div>
-    <!-- /Loading animation -->
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div id="page" class="page">
-        <!-- Header -->
-        <header id="site_header" class="header mobile-menu-hide">
-            <div class="header-content">
-                <div class="site-title-block mobile-hidden">
-                    <div class="site-title"><span>dotnetskills</span> - Mykhailo Nohas</div>
-                </div>
-
-                <!-- Navigation -->
-                <div class="site-nav">
-                    <!-- Main menu -->
-                    <ul id="nav" class="site-main-menu">
-                        <li>
-                            <a class="pt-trigger" href="#home" data-animation="62">Home</a><!-- href value = data-id without # of .pt-page. -->
-                        </li>
-                        <li>
-                            <a class="pt-trigger" href="#resume" data-animation="62">Resume</a>
-                        </li>
-                    </ul>
-                    <!-- /Main menu -->
-                </div>
-                <!-- Navigation -->
-            </div>
-        </header>
-        <!-- /Header -->
-        <!-- Mobile Header -->
-        <div class="mobile-header mobile-visible">
-            <div class="mobile-logo-container">
-                <div class="mobile-site-title">Mykhailo Nohas</div>
-            </div>
-
-            <a class="menu-toggle mobile-visible">
-                <i class="fa fa-bars"></i>
+    <!-- No id="top" here on purpose: with no such element, "#top" scrolls to the
+         very top of the document. Targeting the sticky header would not scroll. -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main">
+            <a class="brand" href="#top" aria-label="Mykhailo Nohas - back to top">
+                <span class="brand-mark" aria-hidden="true">MN</span>
+                <span class="brand-name">Mykhailo Nohas</span>
             </a>
-        </div>
-        <!-- /Mobile Header -->
-        <!-- Main Content -->
-        <div id="main" class="site-main">
-            <!-- Page changer wrapper -->
-            <div class="pt-wrapper">
-                <!-- Subpages -->
-                <div class="subpages">
 
-                    <!-- Home Subpage -->
-                    <section class="pt-page" data-id="home">
-                        <div class="section-inner start-page-content">
-                            <div class="page-header">
-                                <div class="row">
-                                    <div class="col-sm-4 col-md-4 col-lg-4">
-                                        <div class="photo">
-                                            <img src="images/main_photo.jpg" alt="">
-                                        </div>
-                                    </div>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
 
-                                    <div class="col-sm-8 col-md-8 col-lg-8">
-                                        <div class="title-block">
-                                            <h1>Mykhailo Nohas</h1>
-                                            <div class="owl-carousel text-rotation">
-                                                <div class="item">
-                                                    <div class="sp-subtitle">Senior Software Engineer</div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="sp-subtitle">Engineering Manager</div>
-                                                </div>
-                                            </div>
-                                        </div>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#experience">Experience</a>
+                <a href="#background">Background</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <a class="btn btn-small" href="CV.pdf" target="_blank" rel="noopener">Download CV</a>
+            </div>
+        </nav>
+    </header>
 
-                                    </div>
-                                </div>
-                            </div>
+    <main id="main">
 
-                            <div class="page-content">
-                                <div class="row">
-
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="about-me">
-                                            <div class="block-title">
-                                                <h3>About <span>Me</span></h3>
-                                            </div>
-                                            <p>I'm a Senior Software Engineer and Engineering Manager with more than 10 years of experience building backend systems, enterprise applications, and full-stack products with .NET and modern web technologies. I work with companies to design, build, improve, and stabilize software that needs to be reliable, scalable, and ready for real-world use.</p>
-                                            <p>My main background is in .NET (C#), backend development, system architecture, APIs, microservices, and cloud solutions. I've worked on SaaS platforms handling millions of daily users, enterprise automation systems, and custom business applications integrated with external services. When needed, I also support frontend development, mainly with Angular and React.</p>
-                                            <p>Over the years, I've worked in both freelance and leadership roles where I have:</p>
-                                            <ul>
-                                                <li>built and enhanced scalable .NET backend services,</li>
-                                                <li>designed ranking and optimization logic that improved business outcomes,</li>
-                                                <li>reduced infrastructure costs and increased platform stability,</li>
-                                                <li>mentored engineers and supported technical decisions,</li>
-                                                <li>adapted quickly to unfamiliar stacks when the project required it.</li>
-                                            </ul>
-                                            <p>I'm a good fit for projects involving:</p>
-                                            <ul>
-                                                <li>.NET / C# backend development</li>
-                                                <li>Web APIs and microservices</li>
-                                                <li>system architecture and solution design</li>
-                                                <li>performance optimization</li>
-                                                <li>SQL Server, PostgreSQL, and MongoDB</li>
-                                                <li>Azure and AWS</li>
-                                                <li>Angular / React support</li>
-                                                <li>technical leadership and code reviews</li>
-                                            </ul>
-                                            <p>I care about clean, maintainable code, clear business understanding, and practical solutions that work well in production.</p>
-                                        </div>
-                                        <div class="download-resume">
-                                            <a href="CV.pdf" target="_blank" class="btn btn-secondary">Download Resume</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <ul class="info-list">
-                                            <li><span class="title">Age</span><span class="value">30</span></li>
-                                            <li><span class="title">Residence</span><span class="value">Poland</span></li>
-                                            <li><span class="title">Nationality</span><span class="value">Ukrainian, Polish</span></li>
-                                            <li><span class="title">E-mail</span><span class="value"><a href="mailto:myhazbo@gmail.com">myhazbo@gmail.com</a></span></li>
-                                            <li><span class="title">Phone</span><span class="value">+48 793 354 008</span></li>
-                                            <li><span class="title">Freelance</span><span class="value available">Available</span></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- End of Home Subpage -->
-                    <!-- Resume Subpage -->
-                    <section class="pt-page" data-id="resume">
-                        <div class="section-inner custom-page-content">
-                            <div class="page-header color-1">
-                                <h2>Resume</h2>
-                            </div>
-                            <div class="page-content">
-
-                                <!-- Experience -->
-                                <div class="row">
-                                    <div class="block-title" style="text-align: center;">
-                                        <h3>Experience</h3>
-                                    </div>
-
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="block">
-                                            <div class="timeline">
-
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">Engineering Manager</h4>
-                                                    <span class="item-period">Sep 2025 – Present</span>
-                                                    <span class="item-small">FieldPulse · Contract · Remote</span>
-                                                    <ul class="item-description">
-                                                        <li>Led the engineering team to systematically resolve critical platform issues, significantly improving system stability.</li>
-                                                        <li>Identified and implemented infrastructure optimizations that reduced resource consumption by 30%+.</li>
-                                                        <li>Adapted to a Ruby &amp; React Native stack outside primary .NET background using AI-assisted workflows.</li>
-                                                        <li>Mentored mid-level engineers, conducted code reviews, and drove adoption of best practices.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">Software Developer .NET</h4>
-                                                    <span class="item-period">Jan 2025 – Sep 2025</span>
-                                                    <span class="item-small">Dynata · Freelance · Remote</span>
-                                                    <ul class="item-description">
-                                                        <li>Backend development in .NET (C#) for a high-scalability SaaS survey platform serving millions of daily active users.</li>
-                                                        <li>Designed and implemented a proprietary survey ranking algorithm that increased completed surveys by 10%.</li>
-                                                        <li>Built complex Web API services using MS SQL, Identity Server, and Azure Functions.</li>
-                                                        <li>Mentored mid-level engineers and drove adoption of best practices.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">Software Developer .NET</h4>
-                                                    <span class="item-period">May 2023 – Dec 2024</span>
-                                                    <span class="item-small">inBrain.ai · Freelance · Remote</span>
-                                                    <ul class="item-description">
-                                                        <li>Built and scaled a SaaS survey delivery platform supporting millions of daily interactions.</li>
-                                                        <li>Delivered .NET (C#) backend features and contributed to frontend work when needed.</li>
-                                                        <li>Collaborated on survey ranking and optimization systems to improve user engagement and completion rates.</li>
-                                                        <li>Mentored mid-level engineers and drove adoption of best practices.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">Freelance .NET Developer</h4>
-                                                    <span class="item-period">May – Jun 2023</span>
-                                                    <span class="item-small">Independent · Remote</span>
-                                                    <ul class="item-description">
-                                                        <li>Built a real-time dashboard system for data visualization.</li>
-                                                        <li>Stack: .NET Core, MediatR, CQRS, MS SQL, Angular.</li>
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="block">
-                                            <div class="timeline">
-
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">Deputy Head / Senior Software Engineer</h4>
-                                                    <span class="item-period">Dec 2019 – May 2023</span>
-                                                    <span class="item-small">Primetals Technologies · Full-time · Rzeszów / Kraków</span>
-                                                    <ul class="item-description">
-                                                        <li>Progressed from Software Engineer to Deputy Head of Department within 3.5 years.</li>
-                                                        <li>Designed a real-time material tracking system driven by OPC UA and TCP/IP signals.</li>
-                                                        <li>Led development of a large-scale microservice architecture integrating gRPC, OPC UA, MQTT, and TCP.</li>
-                                                        <li>Mentored junior and mid-level engineers, conducted code reviews, and drove best practices.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">.NET Developer</h4>
-                                                    <span class="item-period">Sep 2018 – Nov 2019</span>
-                                                    <span class="item-small">FABRITY K2 · Full-time · Poland</span>
-                                                    <ul class="item-description">
-                                                        <li>Developed and maintained a large-scale process automation system integrated with 8+ external systems.</li>
-                                                        <li>Stack: ASP.NET MVC, Angular, REST/SOAP APIs.</li>
-                                                        <li>Built ASP.NET MVC webhook listeners for CLIO API integration with OAuth 2.0.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">Programmer / .NET Developer</h4>
-                                                    <span class="item-period">Sep 2014 – Aug 2018</span>
-                                                    <span class="item-small">Ideo Sp. z o.o. · Full-time · Rzeszów</span>
-                                                    <ul class="item-description">
-                                                        <li>Core developer on a B2B hotel booking platform for 3+ years, integrating 20+ external APIs (REST, SOAP, WCF).</li>
-                                                        <li>Configured CI/CD pipelines with zero-downtime deployment via TeamCity and Octopus Deploy.</li>
-                                                        <li>Developed a CRM system from scratch using .NET Core, Web API, and Azure.</li>
-                                                        <li>Built a dedicated microservice with .NET Core, ReactJS, and MongoDB including integration and unit tests.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">.NET Developer</h4>
-                                                    <span class="item-period">Mar 2018 – Aug 2018</span>
-                                                    <span class="item-small">DevCrew · Part-time</span>
-                                                    <ul class="item-description">
-                                                        <li>Developed CRM application features using ASP.NET MVC, AngularJS, and MS SQL.</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">.NET Developer</h4>
-                                                    <span class="item-period">Feb 2017 – Aug 2017</span>
-                                                    <span class="item-small">DecisionMapper · Contract</span>
-                                                    <ul class="item-description">
-                                                        <li>Contributed to application development using .NET technologies.</li>
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /Experience -->
-
-                                <!-- Skills -->
-                                <div class="row">
-                                    <div class="block-title" style="text-align: center;">
-                                        <h3>Technical <span>Skills</span></h3>
-                                    </div>
-
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="block">
-                                            <div class="block-title" style="text-align: center;">
-                                                <h4>Backend</h4>
-                                            </div>
-                                            <div class="skills-info">
-                                                <h4>C# / .NET</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-100"></div>
-                                                </div>
-
-                                                <h4>ASP.NET Core Web API</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-80"></div>
-                                                </div>
-
-                                                <h4>Microservices / gRPC / WCF</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-80"></div>
-                                                </div>
-
-                                                <h4>Entity Framework / Dapper</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-80"></div>
-                                                </div>
-
-                                                <h4>MediatR / CQRS</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-60"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="block">
-                                            <div class="block-title" style="text-align: center;">
-                                                <h4>Frontend</h4>
-                                            </div>
-                                            <div class="skills-info">
-                                                <h4>Angular</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-60"></div>
-                                                </div>
-
-                                                <h4>React / React Native</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-40"></div>
-                                                </div>
-
-                                                <h4>JavaScript / TypeScript</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-40"></div>
-                                                </div>
-
-                                                <h4>HTML / CSS</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-60"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="block">
-                                            <div class="block-title" style="text-align: center;">
-                                                <h4>Databases &amp; Caching</h4>
-                                            </div>
-                                            <div class="skills-info">
-                                                <h4>MS SQL Server</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-80"></div>
-                                                </div>
-
-                                                <h4>PostgreSQL</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-60"></div>
-                                                </div>
-
-                                                <h4>MongoDB</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-60"></div>
-                                                </div>
-
-                                                <h4>Redis</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-60"></div>
-                                                </div>
-
-                                                <h4>ElasticSearch</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-40"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="block">
-                                            <div class="block-title" style="text-align: center;">
-                                                <h4>Cloud &amp; DevOps</h4>
-                                            </div>
-                                            <div class="skills-info">
-                                                <h4>Microsoft Azure</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-60"></div>
-                                                </div>
-
-                                                <h4>AWS</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-40"></div>
-                                                </div>
-
-                                                <h4>CI/CD (Azure DevOps, TeamCity, Octopus)</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-60"></div>
-                                                </div>
-
-                                                <h4>Engineering Management &amp; Code Review</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-80"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /Skills -->
-
-                                <!-- Education -->
-                                <div class="row">
-                                    <div class="block-title" style="text-align: center;">
-                                        <h3>Education</h3>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="block">
-                                            <div class="timeline">
-                                                <div class="timeline-item">
-                                                    <h4 class="item-title">Engineer's Degree — Software Development</h4>
-                                                    <span class="item-period">2012 – 2016</span>
-                                                    <span class="item-small">University of Information Technologies and Management in Rzeszów</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /Education -->
-
-                                <!-- Language Knowledge -->
-                                <div class="row">
-                                    <div class="block-title" style="text-align: center;">
-                                        <h3>Language <span>Knowledge</span></h3>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6 col-lg-6">
-                                        <div class="block">
-                                            <div class="skills-info">
-                                                <h4>Ukrainian — Native</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-100"></div>
-                                                </div>
-
-                                                <h4>Polish — C1</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-80"></div>
-                                                </div>
-
-                                                <h4>English — B1</h4>
-                                                <div class="skill-container">
-                                                    <div class="skill-percentage skill-60"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /Language Knowledge -->
-
-                                <!-- Download Resume Button -->
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12">
-                                        <div class="block">
-                                            <div class="center download-resume">
-                                                <a href="CV.pdf" target="_blank" class="btn btn-secondary">Download Resume</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /Download Resume Button -->
-
-                            </div>
-                        </div>
-                    </section>
-                    <!-- End of Resume Subpage -->
-
+        <!-- Hero -->
+        <section class="hero container">
+            <div class="hero-text">
+                <p class="eyebrow">Engineering Manager <span class="dot" aria-hidden="true"></span> Hands-on</p>
+                <h1>Mykhailo Nohas</h1>
+                <p class="lead">
+                    I lead engineering teams across people management, technical decisions and product
+                    delivery &mdash; and I still write code. 12 years in software, starting as a .NET engineer.
+                </p>
+                <ul class="hero-meta" aria-label="Location and engagement">
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                        Rzeszów, Poland
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+                        Remote
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                        B2B contracts (EU / US)
+                    </li>
+                </ul>
+                <div class="hero-cta">
+                    <a class="btn" href="mailto:myhazbo@gmail.com">Get in touch</a>
+                    <a class="btn btn-ghost" href="CV.pdf" target="_blank" rel="noopener">
+                        Download CV
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
+                    </a>
                 </div>
             </div>
-            <!-- /Page changer wrapper -->
+
+            <figure class="hero-photo">
+                <img src="images/main_photo.jpg" alt="Portrait of Mykhailo Nohas" width="512" height="512">
+                <figcaption class="now-card">
+                    <span class="now-label"><span class="pulse" aria-hidden="true"></span>Currently</span>
+                    <strong>Engineering Manager</strong>
+                    <span>FieldPulse &middot; phone system platform</span>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats container" aria-label="Highlights">
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">years in software development</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">E2E</span>
+                    <span class="stat-label">engineering leadership across people, architecture and delivery</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">30%+</span>
+                    <span class="stat-label">lower resource consumption of the phone system platform through architecture and infrastructure optimization</span>
+                    <span class="stat-source">FieldPulse</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">+10%</span>
+                    <span class="stat-label">more completed surveys from a ranking algorithm I designed</span>
+                    <span class="stat-source">Dynata</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">8+</span>
+                    <span class="stat-label">steel plants running a tracking system I built the first version of</span>
+                    <span class="stat-source">Primetals Technologies</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section container" id="about">
+            <div class="section-head">
+                <p class="section-kicker">01 &mdash; About</p>
+                <h2>Engineering quality, balanced with business priorities</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I'm a hands-on Engineering Manager with 12 years of experience in software development.
+                        I started as a .NET engineer and grew into technical leadership and engineering management
+                        while staying close to the code.
+                    </p>
+                    <p>
+                        I lead engineering teams across people management, technical decisions and product delivery,
+                        working closely with product and leadership to balance engineering quality with business priorities.
+                    </p>
+                </div>
+                <aside class="focus-card reveal" aria-label="Current focus">
+                    <h3>Recent focus</h3>
+                    <ul class="focus-list">
+                        <li><span class="focus-icon" aria-hidden="true">&#9670;</span>Platform reliability</li>
+                        <li><span class="focus-icon" aria-hidden="true">&#9670;</span>Engineering process improvements</li>
+                        <li><span class="focus-icon" aria-hidden="true">&#9670;</span>Internal tools</li>
+                        <li><span class="focus-icon" aria-hidden="true">&#9670;</span>AI automation</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Expertise -->
+        <section class="section container" id="expertise">
+            <div class="section-head">
+                <p class="section-kicker">02 &mdash; Expertise</p>
+                <h2>Core competencies</h2>
+            </div>
+            <div class="cards">
+                <article class="card reveal">
+                    <div class="card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 6 4.8"/></svg>
+                    </div>
+                    <h3>Leadership</h3>
+                    <ul class="tags">
+                        <li>People management</li>
+                        <li>Hiring</li>
+                        <li>Performance reviews</li>
+                        <li>Compensation</li>
+                        <li>Cross-functional collaboration</li>
+                        <li>Aligning priorities with product &amp; leadership</li>
+                        <li>Roadmap planning</li>
+                        <li>Delivery process</li>
+                    </ul>
+                </article>
+                <article class="card reveal">
+                    <div class="card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+                    </div>
+                    <h3>Internal tools &amp; AI automation</h3>
+                    <ul class="tags">
+                        <li>Admin tools</li>
+                        <li>Dashboards &amp; reporting</li>
+                        <li>AI-assisted workflows</li>
+                        <li>Process automation</li>
+                    </ul>
+                </article>
+                <article class="card reveal">
+                    <div class="card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg>
+                    </div>
+                    <h3>Engineering</h3>
+                    <p class="card-lead">AI-first software delivery, end to end:</p>
+                    <ol class="flow">
+                        <li>Analysis</li>
+                        <li>Development</li>
+                        <li>Code review</li>
+                        <li>Testing</li>
+                        <li>Deployment</li>
+                    </ol>
+                </article>
+                <article class="card reveal">
+                    <div class="card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6M4 11.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+                    </div>
+                    <h3>Cloud &amp; databases</h3>
+                    <ul class="tags">
+                        <li>AWS</li>
+                        <li>Azure</li>
+                        <li>PostgreSQL</li>
+                        <li>SQL Server</li>
+                        <li>MongoDB</li>
+                        <li>Redis</li>
+                        <li>Elasticsearch</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section container" id="experience">
+            <div class="section-head">
+                <p class="section-kicker">03 &mdash; Experience</p>
+                <h2>From .NET engineer to engineering manager</h2>
+            </div>
+
+            <ol class="timeline">
+
+                <li class="role reveal is-current">
+                    <div class="role-when">
+                        <span class="role-period">Sep 2025 &ndash; Present</span>
+                        <span class="badge">Current</span>
+                    </div>
+                    <div class="role-body">
+                        <h3 class="role-title">Engineering Manager</h3>
+                        <p class="role-company">FieldPulse <span>&middot; Contract &middot; Remote</span></p>
+                        <p class="role-context">
+                            US field service SaaS. Leading the engineering team of the company's phone system platform:
+                            call routing, PBX provisioning, messaging compliance, speech-to-text and AI call summaries.
+                        </p>
+                        <ul class="stack" aria-label="Tech stack">
+                            <li>Ruby</li><li>TypeScript</li><li>React</li><li>React Native</li><li>.NET</li>
+                        </ul>
+                        <ul class="highlights">
+                            <li><strong>Full people management</strong> of a team of 2 backend, 1 frontend and 1 QA engineer: hiring, onboarding, performance reviews, compensation and professional development.</li>
+                            <li><strong>Partnered with product and leadership</strong> to set priorities, evaluate technical trade-offs and align engineering delivery with business goals.</li>
+                            <li><strong>Led the platform stabilization end to end:</strong> assessed technical risks across frontend and backend, prioritized the improvements and coordinated their delivery.</li>
+                            <li><strong>Moved operational work out of engineering</strong> (compliance, number porting, provisioning, routine tech support) with self-service internal tools, including an admin dashboard with a number porting tool used by Customer Success, so engineers could focus on the roadmap.</li>
+                            <li><strong>Owned the data and alerting tools</strong> used by leadership and business teams: monthly churn analysis, support case tracking that lets the team act before issues escalate, alerts for issues that affect many customers, and management dashboards.</li>
+                            <li><strong>Led the call quality investigation:</strong> built a tool that shows whether a bad call was caused by the platform or the customer's network, the base for automatic tagging of affected calls.</li>
+                            <li><strong>Hands-on 20&ndash;40% of the time:</strong> built customer-facing features, designed the PBX onboarding API, and led architecture and infrastructure changes.</li>
+                            <li><strong>Improved platform efficiency</strong> through cost analysis and optimization of architecture and infrastructure, reducing resource consumption by 30%+.</li>
+                            <li><strong>Set up the delivery process:</strong> one shared engineering and QA board with visible blockers, priorities and estimates, a Definition of Ready, AI-first code review, and stronger testing and quality assurance, including a QA framework for mobile call quality.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="role reveal">
+                    <div class="role-when">
+                        <span class="role-period">Jan 2025 &ndash; Sep 2025</span>
+                    </div>
+                    <div class="role-body">
+                        <h3 class="role-title">Senior .NET Developer</h3>
+                        <p class="role-company">Dynata <span>&middot; Contract &middot; Remote</span></p>
+                        <p class="role-context">Continued work on the survey platform after Dynata acquired inBrain.</p>
+                        <ul class="highlights">
+                            <li>Led the team on the Admin Dashboard project, working closely with business and product teams.</li>
+                            <li>Designed and delivered a survey ranking algorithm that <strong>increased survey completion by 10%</strong> on a platform with millions of monthly users.</li>
+                            <li>Built backend services for survey delivery.</li>
+                        </ul>
+                        <ul class="stack" aria-label="Tech stack">
+                            <li>.NET</li><li>SQL Server</li><li>Identity Server</li><li>Azure Functions</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="role reveal">
+                    <div class="role-when">
+                        <span class="role-period">May 2023 &ndash; Dec 2024</span>
+                    </div>
+                    <div class="role-body">
+                        <h3 class="role-title">.NET Developer</h3>
+                        <p class="role-company">inBrain.ai <span>&middot; Contract &middot; Remote</span></p>
+                        <p class="role-context">SaaS survey platform, later acquired by Dynata.</p>
+                        <ul class="highlights">
+                            <li>Built backend features for a survey delivery platform with millions of daily interactions.</li>
+                            <li>Worked on survey ranking and optimization logic to improve engagement and completion rates.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="role reveal">
+                    <div class="role-when">
+                        <span class="role-period">Dec 2019 &ndash; May 2023</span>
+                    </div>
+                    <div class="role-body">
+                        <h3 class="role-title">Deputy Head / Senior Software Engineer</h3>
+                        <p class="role-company">Primetals Technologies <span>&middot; Full-time &middot; Rzeszów / Kraków, Poland</span></p>
+                        <ol class="progression" aria-label="Promotions">
+                            <li><span>2019</span>Software Engineer</li>
+                            <li><span>2021</span>Senior Software Engineer</li>
+                            <li><span>2022</span>Deputy Head of Department</li>
+                        </ol>
+                        <ul class="highlights">
+                            <li>As deputy head of department, led engineering decisions for material tracking.</li>
+                            <li>Built the first version of a <strong>real-time material tracking system</strong> based on device signals: material measurements and material location across the plant. Guided and supported its rollout to <strong>8+ steel plants</strong>.</li>
+                            <li>Led a microservice architecture for process automation.</li>
+                        </ul>
+                        <ul class="stack" aria-label="Tech stack">
+                            <li>gRPC</li><li>OPC UA</li><li>MQTT</li><li>TCP</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="role reveal">
+                    <div class="role-when">
+                        <span class="role-period">Sep 2018 &ndash; Nov 2019</span>
+                    </div>
+                    <div class="role-body">
+                        <h3 class="role-title">.NET Developer</h3>
+                        <p class="role-company">FABRITY K2 <span>&middot; Full-time &middot; Poland</span></p>
+                        <ul class="highlights">
+                            <li>Built a process automation system integrated with 8+ external systems, including OAuth 2.0 integrations.</li>
+                        </ul>
+                        <ul class="stack" aria-label="Tech stack">
+                            <li>ASP.NET MVC</li><li>Angular</li><li>OAuth 2.0</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="role reveal">
+                    <div class="role-when">
+                        <span class="role-period">Sep 2014 &ndash; Aug 2018</span>
+                    </div>
+                    <div class="role-body">
+                        <h3 class="role-title">.NET Developer</h3>
+                        <p class="role-company">Ideo Sp. z o.o. <span>&middot; Full-time &middot; Rzeszów, Poland</span></p>
+                        <ul class="highlights">
+                            <li>Core developer of a B2B hotel booking platform integrated with <strong>20+ external APIs</strong> (REST, SOAP, WCF).</li>
+                            <li>Set up zero-downtime CI/CD and built a CRM system from scratch.</li>
+                        </ul>
+                        <ul class="stack" aria-label="Tech stack">
+                            <li>.NET Core</li><li>Azure</li><li>TeamCity</li><li>Octopus Deploy</li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ol>
+        </section>
+
+        <!-- Background -->
+        <section class="section container" id="background">
+            <div class="section-head">
+                <p class="section-kicker">04 &mdash; Background</p>
+                <h2>Education &amp; languages</h2>
+            </div>
+            <div class="bg-grid">
+                <article class="card reveal">
+                    <h3>Education</h3>
+                    <p class="edu-degree">Engineer's Degree, Software Development</p>
+                    <p class="edu-school">University of Information Technology and Management in Rzeszów</p>
+                    <p class="edu-years">2012 &ndash; 2016</p>
+                </article>
+                <article class="card reveal">
+                    <h3>Languages</h3>
+                    <ul class="langs">
+                        <li><span>Ukrainian</span><span class="level">Native</span></li>
+                        <li><span>Polish</span><span class="level">C1</span></li>
+                        <li><span>English</span><span class="level">B2</span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact container" id="contact">
+            <div class="contact-inner reveal">
+                <p class="section-kicker">05 &mdash; Contact</p>
+                <h2>Let's talk about your team</h2>
+                <p>Open to remote B2B engagements with companies in the EU and US.</p>
+                <div class="contact-links">
+                    <a class="contact-link" href="mailto:myhazbo@gmail.com">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>
+                        <span><small>Email</small>myhazbo@gmail.com</span>
+                    </a>
+                    <a class="contact-link" href="https://www.linkedin.com/in/mykhailo-nohas-5b6169a0" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5c0-1.7 1.2-3 2.7-3s2.3 1 2.3 2.8V17"/></svg>
+                        <span><small>LinkedIn</small>mykhailo-nohas</span>
+                    </a>
+                    <a class="contact-link" href="CV.pdf" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+                        <span><small>Resume</small>CV.pdf</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>&copy; <span id="year">2026</span> Mykhailo Nohas</span>
+            <a href="#top">Back to top &uarr;</a>
         </div>
-        <!-- /Main Content -->
-    </div>
-    <footer>
-        <div class="copyrights">© 2026 All rights reserved</div>
     </footer>
 
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/pages-switcher.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/site.js" defer></script>
 </body>
 </html>
