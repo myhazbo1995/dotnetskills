@@ -1,0 +1,8 @@
+services:
+  website:
+    build: .
+    image: dotnetskills-website:latest
+    container_name: dotnetskills-website
+    ports:
+      - "8080:80"
+    restart: unless-stopped
