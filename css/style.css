@@ -374,7 +374,7 @@ svg { flex: none; }
 .stats { margin-bottom: clamp(56px, 9vw, 112px); }
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid var(--line);
     /* Each stat draws its divider as a left/top shadow; clipping hides the
        ones on the outer edge, so any column count wraps cleanly. */
@@ -754,7 +754,7 @@ svg { flex: none; }
 }
 
 @media (max-width: 960px) {
-    .stats-grid { grid-template-columns: repeat(3, 1fr); }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
 
     .role { grid-template-columns: 1fr; gap: 8px; padding-left: 28px; }
     .role::before { left: 5px; }
